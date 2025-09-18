@@ -9,7 +9,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Dashboard />}>
       <Route index element={<Frontpage />} /> {/* Default route (e.g., home) */}
       <Route path="medibot" element={<Medibot />} /> {/* Route for Medbot */}
-      <Route path="doctors" element={<Doctors />} /> 
+      <Route path="Doctors List" element={<Doctors />} /> 
 
       {/* Add more child routes here as needed, e.g., <Route path="inventory" element={<Inventory />} /> */}
     </Route>

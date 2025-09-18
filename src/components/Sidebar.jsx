@@ -1,6 +1,7 @@
 import { Bot, List, Pill, Calendar, FileText, FlaskConical } from "lucide-react";
 import { useState } from "react";
-import { Heart } from "lucide-react";
+
+import {Link} from 'react-router-dom'
 import logo from "../assets/logo.png";
 export default function Sidebar() {
   const [active, setActive] = useState("home");
@@ -18,18 +19,18 @@ export default function Sidebar() {
 
   return (
     <div className="  h-screen w-64  bg-white shadow-sm flex flex-col">
-      <div className="flex items-center p-8 pt-4 pb-4 space-x-2">
+      <div className="flex items-center p-8 pt-4 pb-[9.5px] shadow space-x-2">
         <div className="w-10 h-10 rounded-full overflow-hidden">
           <img src={logo} alt="Logo" className="w-full h-full object-cover" />
         </div>
 
         <span className="font-semibold text-lg">
-          <span className="text-blue-500">Arogya</span>
-          <span className="text-green-500">Care</span>
+          <span className="text-blue-500 text-2xl ">Arogya</span>
+          <span className="text-green-500  text-2xl">Care</span>
         </span>
 
       </div>
-      <hr></hr>
+      
 
       {/* Menu Items */}
       <ul className="flex-1 mt-4">
@@ -41,7 +42,7 @@ export default function Sidebar() {
                 }`}
             >
               {item.icon}
-              <span>{item.name}</span>
+              <Link to= {item.name}>{item.name}</Link>
             </button>
           </li>
         ))}

@@ -2,7 +2,7 @@ import React from "react";
 
 const doctors = [
   {
-    name: "Dr. Sarahansh",
+    name: "Dr. Sarahansh Gupta",
     specialty: "Cardiologist",
     distance: "0.5 km away",
     rating: 4.9,
@@ -45,7 +45,7 @@ export default function NearbyDoctors() {
         {doctors.map((doc, index) => (
           <div
             key={index}
-            className="p-4 rounded-xl bg-[#EFF7FD] shadow-sm flex flex-col items-center text-center"
+            className="p-4 rounded-xl bg-blue-50 shadow-sm flex flex-col items-center text-center"
           >
             <img
               src={doc.img}

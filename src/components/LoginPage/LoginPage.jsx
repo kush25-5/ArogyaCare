@@ -14,6 +14,7 @@ export default function LoginPage() {
   };
 
   return (
+   <div className="bg-blue-100">
     <div className="flex items-center justify-center min-h-screen bg-[#f5f9ff]">
       {/* Login Card */}
       <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
@@ -112,5 +113,6 @@ export default function LoginPage() {
         </p>
       </div>
     </div>
+   </div>
   );
 }

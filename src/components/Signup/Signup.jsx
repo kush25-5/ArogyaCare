@@ -17,9 +17,9 @@ export default function SignupPage() {
       <div className="bg-white shadow-lg rounded-2xl flex flex-col md:flex-row w-full max-w-5xl overflow-hidden">
         
         {/* Left Side (Illustration) */}
-        <div className="hidden md:flex w-1/2 items-center justify-center bg-gradient-to-br from-blue-500 to-blue-700 p-6">
+        <div className="hidden md:flex w-1/2 items-center justify-center bg-gradient-to-br from-green-100 to-blue-700 p-6">
           <img
-            src="/doctor-illustration.png"
+            src="/src/assets/Healthcare_login_illustration_f4438a3d.png"
             alt="Healthcare"
             className="rounded-xl"
           />
@@ -28,10 +28,10 @@ export default function SignupPage() {
         {/* Right Side (Form) */}
         <div className="w-full md:w-1/2 p-8 overflow-y-auto">
           {/* Heading */}
-          <h1 className="text-2xl font-bold text-gray-800">
+          <h1 className="text-2xl font-bold text-blue-500">
             Arogya<span className="text-green-600">Care</span>
           </h1>
-          <p className="text-sm text-gray-600 mb-6">
+          <p className="text-md text-gray-600 mb-6">
             Join our healthcare community and manage your health journey
           </p>
 

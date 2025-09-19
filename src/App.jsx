@@ -6,6 +6,7 @@ import Doctors from './components/VarDoctors/Doctors';
 import LoginPage from './components/LoginPage/LoginPage';
 import Medmain from './components/Medicine/Medmain';
 import SignupPage from './components/Signup/Signup';
+import VerifyPage from './components/LoginPage/VerifyPage';
 
 
 const router = createBrowserRouter(
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
       <Route path="Login" element = {<LoginPage/>}/> 
       <Route path="Medicine" element = {<Medmain/>}/>
       <Route path="SignUp" element = {<SignupPage/>}/>
+      <Route path="Verify" element = {<VerifyPage/>}/>
 
       {/* Add more child routes here as needed, e.g., <Route path="inventory" element={<Inventory />} /> */}
     </Route>

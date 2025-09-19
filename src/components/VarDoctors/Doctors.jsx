@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "./VarDoctors/Head";
+import Head from "./Head";
  // <-- import new component
 
 function Frontpage() {

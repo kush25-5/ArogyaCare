@@ -25,8 +25,8 @@ export default function Sidebar() {
         </div>
 
         <span className="font-semibold text-lg">
-          <span className="text-blue-500 text-2xl ">Arogya</span>
-          <span className="text-green-500  text-2xl">Care</span>
+          <Link to = "/" className="text-blue-500 text-2xl ">Arogya</Link>
+          <Link to = "/" className="text-green-500  text-2xl">Care</Link>
         </span>
 
       </div>

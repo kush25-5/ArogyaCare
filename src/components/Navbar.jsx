@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Search, User, Settings, LogOut } from "lucide-react";
+import {Link} from "react-router-dom";
 
 // npm install lucide-react
 
@@ -36,12 +37,12 @@ export default function Navbar() {
           <div className="absolute right-0 mt-2 w-40 bg-white rounded-xl shadow-lg ring-1 ring-black ring-opacity-5">
             <ul className="py-2">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="login"
                   className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100"
                 >
                   <User size={16} /> Profile
-                </a>
+                </Link>
               </li>
               <li>
                 <a

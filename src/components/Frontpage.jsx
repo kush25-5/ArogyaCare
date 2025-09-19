@@ -1,6 +1,6 @@
 import React from "react";
 import NearbyDoctors from "./VarDashboard/NearbyDoctors";
-import MedicationReminders from "./MedicationReminders";
+import MedicationReminders from "./VarDashboard/MedicationReminders";
 import Surveybox from "./VarDashboard/Survyebox";
 import Appointment from "./VarDashboard/Appointment";
 import RecentOrder from "./VarDashboard/RecentOrder";

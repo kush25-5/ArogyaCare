@@ -5,6 +5,7 @@ import Medibot from './components/Medibot';
 import Doctors from './components/VarDoctors/Doctors';
 import LoginPage from './components/LoginPage/LoginPage';
 import Medmain from './components/Medicine/Medmain';
+import SignupPage from './components/Signup/Signup';
 
 
 const router = createBrowserRouter(
@@ -15,6 +16,7 @@ const router = createBrowserRouter(
       <Route path="Doctors List" element={<Doctors />} />
       <Route path="Login" element = {<LoginPage/>}/> 
       <Route path="Medicine" element = {<Medmain/>}/>
+      <Route path="SignUp" element = {<SignupPage/>}/>
 
       {/* Add more child routes here as needed, e.g., <Route path="inventory" element={<Inventory />} /> */}
     </Route>

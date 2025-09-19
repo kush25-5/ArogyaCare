@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLocation } from "wouter";
 import { Eye, EyeOff, Mail, Lock } from "lucide-react";
+import {Link} from "react-router-dom"
 
 export default function LoginPage() {
   const [, setLocation] = useLocation();
@@ -105,9 +106,9 @@ export default function LoginPage() {
         {/* Sign Up */}
         <p className="text-sm text-gray-600 text-center mt-6">
           Don’t have an account?{" "}
-          <a href="#" className="text-blue-600 font-medium hover:underline">
+          <Link to="/SignUp" className="text-blue-600 font-medium hover:underline">
             Sign up
-          </a>
+          </Link>
         </p>
       </div>
     </div>

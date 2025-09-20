@@ -57,7 +57,7 @@ export default function VerifyPage() {
     <div className="flex items-center justify-center min-h-screen bg-[#f5f9ff]">
       <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
         <div className="flex items-center justify-center mb-6">
-          <img src="/logo.png" alt="ArogyaCare Logo" className="h-10 mr-2" />
+          <img src="src/assets/logo.png" alt="ArogyaCare Logo" className="h-10 mr-2" />
           <h1 className="text-2xl font-bold text-[#1e90ff]">
             Arogya<span className="text-green-600">Care</span>
           </h1>

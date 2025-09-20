@@ -3,10 +3,12 @@ import { Outlet, useLocation } from "react-router-dom"; // ✅ useLocation
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Dashboard() {
   const location = useLocation(); // ✅ get current route
+
+  const hideFooterPaths = ["/MediBot","/AboutMed"];
 
   return (
     <div className="flex h-screen overflow-hidden">
@@ -28,15 +30,16 @@ function Dashboard() {
 
           {/* Floating Button */}
           <button className="fixed bottom-6 right-6 bg-green-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-green-700">
-            <Link to= "MediBot" >Consult with AI Doctor</Link>
+            <Link to="MediBot" >Consult with AI Doctor</Link>
           </button>
 
           {/* Footer will only show if NOT on chatbot route */}
-          {location.pathname !== "/MediBot" && (
+          {!hideFooterPaths.includes(location.pathname) && (
             <div className="p-6 bg-blue-50">
               <Footer />
             </div>
           )}
+          
         </div>
       </div>
     </div>

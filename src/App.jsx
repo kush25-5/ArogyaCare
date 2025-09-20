@@ -1,35 +1,54 @@
-import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route } from 'react-router-dom';
-import Dashboard from './components/Dashboard'; // Adjust path if needed
-import Frontpage from './components/Frontpage'; // Import your components
-import Medibot from './components/Medibot';
-import Doctors from './components/VarDoctors/Doctors';
-import LoginPage from './components/LoginPage/LoginPage';
-import Medmain from './components/Medicine/Medmain';
-import SignupPage from './components/Signup/Signup';
-import VerifyPage from './components/LoginPage/VerifyPage';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  createRoutesFromElements,
+  Route,
+} from "react-router-dom";
+import {AuthProvider} from "./Context/AuthContext";
+import ProtectedRoute from "./components/ProtectedRoute";
 
+import Dashboard from "./components/Dashboard";
+import Frontpage from "./components/Frontpage";
+import Medibot from "./components/Medibot";
+import Doctors from "./components/VarDoctors/Doctors";
+import LoginPage from "./components/LoginPage/LoginPage";
+import Medmain from "./components/Medicine/Medmain";
+import SignupPage from "./components/Signup/Signup";
+import VerifyPage from "./components/LoginPage/VerifyPage";
+import MedicinePage from "./components/Medicine/MedicinePage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Dashboard />}>
-      <Route index element={<Frontpage />} /> {/* Default route (e.g., home) */}
-      <Route path="mediBot" element={<Medibot />} /> {/* Route for Medbot */}
-      <Route path="Doctors List" element={<Doctors />} />
-      <Route path="Login" element = {<LoginPage/>}/> 
-      <Route path="Medicine" element = {<Medmain/>}/>
-      <Route path="SignUp" element = {<SignupPage/>}/>
-      <Route path="Verify" element = {<VerifyPage/>}/>
+    <>
+      {/* Public routes */}
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/signup" element={<SignupPage />} />
+      <Route path="/verify" element={<VerifyPage />} />
 
-      {/* Add more child routes here as needed, e.g., <Route path="inventory" element={<Inventory />} /> */}
-    </Route>
+      {/* Protected routes */}
+      <Route
+        path="/"
+        element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        }
+      >
+        <Route index element={<Frontpage />} />
+        <Route path="mediBot" element={<Medibot />} />
+        <Route path="Doctors List" element={<Doctors />} />
+        <Route path="Medicine" element={<Medmain />} />
+        <Route path="AboutMed" element={<MedicinePage />} />
+      </Route>
+    </>
   )
 );
 
 function App() {
   return (
-    <>
+    <AuthProvider>
       <RouterProvider router={router} />
-    </>
+    </AuthProvider>
   );
 }
 

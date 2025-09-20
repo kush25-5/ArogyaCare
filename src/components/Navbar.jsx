@@ -30,7 +30,7 @@ export default function Navbar() {
           onClick={() => setOpen(!open)}
           className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200"
         >
-          <User className="w-5 h-5 text-gray-600" />
+          <User src="" className="w-5 h-5 text-gray-600" />
         </button>
 
         {open && (
@@ -51,6 +51,14 @@ export default function Navbar() {
                 >
                   <Settings size={16} /> Settings
                 </a>
+              </li>
+              <li>
+                <Link
+                  to="/Verify"
+                  className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >
+                  <Settings size={16} /> Verify
+                </Link>
               </li>
               <li>
                 <a

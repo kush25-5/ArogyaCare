@@ -54,8 +54,8 @@ export default function DoctorListing() {
   return (
     <div className="p-6">
       {/* Header */}
-      <h1 className="text-2xl font-semibold mb-2">Find Doctors</h1>
-      <p className="text-gray-600 mb-6">
+      <h1 className="text-3xl font-bold mb-2">Find Doctors</h1>
+      <p className="text-gray-600 text-[20px] mb-6">
         Search and book appointments with qualified healthcare professionals
       </p>
 
@@ -68,13 +68,13 @@ export default function DoctorListing() {
             placeholder="Search by doctor name, specialization, location..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full pl-10 pr-4 py-2 border-white shadow bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
-        <button className="flex items-center gap-2 border px-4 py-2 rounded-lg hover:bg-gray-100">
+        <button className="flex items-center bg-white border-white shadow gap-2 border px-4 py-2 rounded-lg hover:bg-gray-100">
           <Filter size={18} /> Filters
         </button>
-        <button className="flex items-center gap-2 border px-4 py-2 rounded-lg hover:bg-gray-100">
+        <button className="flex items-center gap-2   bg-white border-white shadow  px-4 py-2 rounded-lg hover:bg-gray-100">
           <MapPin size={18} /> View on Map
         </button>
       </div>
@@ -90,7 +90,7 @@ export default function DoctorListing() {
         {filteredDoctors.map((doc) => (
           <div
             key={doc.id}
-            className="bg-white p-5 rounded-lg shadow-sm border flex gap-4 items-start"
+            className="bg-white p-5 border-white bg-white shadow rounded-lg  flex gap-4 items-start"
           >
             {/* Image */}
             <img

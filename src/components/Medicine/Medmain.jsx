@@ -1,5 +1,6 @@
 import React from "react";
 import { Star } from "lucide-react";
+import {Link} from "react-router-dom";
 
 
 const medicines = [
@@ -84,9 +85,9 @@ export default function MedicinePurchase() {
           <input
             type="text"
             placeholder="Search by medicine name, purpose, or brand..."
-            className="w-2/3 px-4 py-2 border rounded-lg"
+            className="w-2/3 px-4 py-2 border-white shadow bg-white rounded-lg"
           />
-          <select className="border px-3 py-2 rounded-lg">
+          <select className=" px-4 py-2 bg-white border-white shadow rounded-lg">
             <option>Sort by: Relevance</option>
             <option>Price: Low to High</option>
             <option>Price: High to Low</option>
@@ -122,9 +123,9 @@ export default function MedicinePurchase() {
               {/* Buttons */}
               <div className="flex gap-2 mt-3">
                 <button className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-blue-700">
-                  Add to Cart
+                  <Link to="/AboutMed" >Add to Cart</Link>
                 </button>
-                <button className="border px-3 py-2 rounded-lg text-sm hover:bg-gray-100">
+                <button className="border-white shadow text-gray px-2 py-2 w-[80px] rounded-lg bg-green-100 text-sm hover:bg-gray-100">
                   Check Availability
                 </button>
               </div>
